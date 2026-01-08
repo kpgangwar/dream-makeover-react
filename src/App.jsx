@@ -38,17 +38,17 @@
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 
 import Login from "./pages/login";
-import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
-import Services from "./components/Services";
-import Contact from "./pages/Contact";
-import Location from "./pages/Location";
-import Offers from "./pages/Offers";
-import Gallery from "./pages/Gallery";
-import Booking from "./pages/Booking";
+import Navbar from "./components/navbar";
+import Home from "./pages/home";
+import Services from "./components/services";
+import Contact from "./pages/contact";
+import Location from "./pages/location";
+import Offers from "./pages/offers";
+import Gallery from "./pages/gallery";
+import Booking from "./pages/booking";
 import AdminDashboard from "./pages/adminDashboard";
 import AdminBooking from "./pages/adminBooking";
-import ProtectedRoute from "./components/ProtectedRoute";
+import ProtectedRoute from "./components/protectedRoute";
 
 import "./styles/global.css";
 
