@@ -2,7 +2,7 @@
 
 import { Helmet } from "react-helmet-async";
 
-import '../styles/Contact.css';
+import '../styles/contact.css';
 
 const Contact = () => {
   return (
