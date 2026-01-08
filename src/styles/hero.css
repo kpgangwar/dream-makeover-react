@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hero {
+  height: 100vh;
+  background: #111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #c9a646;
+  margin-top: -100px; /* 👈 Gap remove */
+}
+
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+}
+
+.hero p {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn-book {
+  background-color: #c9a646;
+  border: none;
+  padding: 1rem 2rem;
+  color: black;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: 0.3s;
+  font-weight: bold;
+  margin-top: 60px;
+}
+
+.btn-book:hover {
+  background-color: #f0cf6b;
+  transform: scale(1.05);
+}

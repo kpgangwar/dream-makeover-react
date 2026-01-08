@@ -1,0 +1,50 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px;
+  border-bottom: 1px solid #333;
+  align-items: center;
+  background: #000;
+}
+
+.logo {
+  color: #c9a646;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 22px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 22px;
+}
+
+.nav-links a {
+  color: white;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: hsl(136, 55%, 53%);
+  transform: scale(1.1);
+} 
+
+/* Active Page Highlight */
+.nav-links a.active {
+  color: #c9a646;
+  border-bottom: 2px solid #c9a646;
+  transform: scale(1.12);
+}
+/* Scroll Animation */
+.navbar {
+  transition: 0.4s ease;
+}
+
+.navbar.scrolled {
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(6px);
+  padding: 10px 35px;
+  border-bottom: 1px solid #c9a64660;
+  transform: translateY(0);
+  box-shadow: 0px 3px 12px rgba(255,255,255,0.05);
+}

@@ -1,0 +1,102 @@
+
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 15px;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  color: black;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  position: relative;
+  font-family: 'Arial', sans-serif; /* font applied */
+}
+
+.modal-content h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: 700; /* bold */
+}
+
+.modal-content p {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #a200ff;
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.modal-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.3s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.modal-btn.call {
+  background: #c0392b;
+}
+
+.modal-btn.call:hover {
+  background: #e74c3c;
+  transform: scale(1.05);
+}
+
+.modal-btn.whatsapp {
+  background: #25D366;
+}
+
+.modal-btn.whatsapp:hover {
+  background: #1ebc5b;
+  transform: scale(1.05);
+}
+
+/* Close button cleaned up */
+.close-btn {
+ margin-right: 20px;
+  margin-top: 6px; /* spacing below modal-buttons */
+  width: 40%;
+  padding: 12px;
+  background: #444;
+  color: white;
+  font-size: 16px !important; /* force size */
+  font-weight: 600 !important; /* force weight */
+  font-family: inherit !important;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.close-btn:hover {
+  background: #222;
+  transform: scale(1.03);
+}

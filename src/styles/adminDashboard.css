@@ -1,0 +1,85 @@
+/* ===== MAIN BACKGROUND ===== */
+.admin-container {
+  min-height: 100vh;
+  padding: 30px;
+  background: radial-gradient(circle at top, #1a1a1a, #000);
+  font-family: "Segoe UI", sans-serif;
+  color: #f5c97a;
+}
+
+/* ===== HEADER ===== */
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(145deg, #111, #000);
+  padding: 20px 25px;
+  border-radius: 10px;
+  border: 1px solid #f5c97a55;
+  box-shadow: 0 0 20px rgba(245, 201, 122, 0.15);
+  margin-bottom: 40px;
+}
+
+.admin-header h1 {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #f5c97a;
+}
+
+/* ===== LOGOUT BUTTON ===== */
+.admin-header button {
+  padding: 10px 22px;
+  background: linear-gradient(135deg, #f5c97a, #cfa44a);
+  color: #000;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.admin-header button:hover {
+  background: linear-gradient(135deg, #ffd98a, #b8902e);
+  transform: scale(1.05);
+}
+
+/* ===== CARDS GRID ===== */
+.admin-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+/* ===== CARD ===== */
+.card {
+  background: linear-gradient(160deg, #111, #050505);
+  border-radius: 15px;
+  padding: 30px 20px;
+  text-align: center;
+  border: 1px solid #f5c97a44;
+  box-shadow: 0 8px 30px rgba(245, 201, 122, 0.12);
+  transition: all 0.3s ease;
+}
+
+/* GOLD GLOW HOVER */
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 45px rgba(245, 201, 122, 0.35);
+}
+
+/* CARD TEXT */
+.card span {
+  display: block;
+  margin-top: 10px;
+  font-size: 15px;
+  color: #d6b46a;
+  letter-spacing: 0.5px;
+}
+
+.card strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 34px;
+  color: #f5c97a;
+}

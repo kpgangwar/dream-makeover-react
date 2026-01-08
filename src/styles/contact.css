@@ -1,0 +1,136 @@
+
+ .contact-page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 80px 20px;
+  background-color: #0d0d0d; /* dark background */
+  flex-wrap: wrap;
+  color: #f0f0f0; /* default text color */
+}
+
+/* Center Content */
+.contact-content {
+  text-align: center;
+  max-width: 400px;
+  flex: 1;
+}
+
+.contact-content h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #ff33cc; /* vibrant pink */
+}
+
+.contact-content p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #c06ed6; /* light purple */
+}
+
+.contact-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.contact-buttons a {
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+  box-shadow: 0 4px 15px rgba(255, 51, 204, 0.4); /* subtle glow */
+}
+
+.whatsapp-btn {
+  background-color: #00c851;
+}
+
+.whatsapp-btn:hover {
+  background-color: #007e33;
+  transform: scale(1.05);
+}
+
+.call-btn {
+  background-color: #ff33cc;
+}
+
+.call-btn:hover {
+  background-color: #cc0099;
+  transform: scale(1.05);
+}
+
+/* Side cards */
+.side-card {
+  background: #1a1a1a;
+  padding: 30px 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(255, 51, 204, 0.3);
+  flex: 1;
+  min-width: 200px;
+  max-width: 250px;
+  text-align: center;
+}
+
+/* .side-card h3 {
+  font-size: 64px;
+ 
+  color: #ff33cc;
+  margin-bottom: 10px;
+} */
+
+
+.side-card h3 {
+  font-size: 45px;   /* pehle 64px tha */
+  color: #ff33cc;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.side-card p {
+  font-size: 16px;
+  color: #c06ed6;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icons a img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s, filter 0.3s;
+  filter: brightness(0.9);
+}
+
+.social-icons a img:hover {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+}
+
+.social-icons a {
+  color: #ff33cc; /* link text color pink */
+  text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .contact-page {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .side-card {
+    max-width: 90%;
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,22 @@
+.offers-page {
+  padding: 2rem;
+  text-align: center;
+  background-color: #fff0f5;
+  min-height: 100vh;
+  color: #333;   /* ⭐ KEY LINE */
+}
+
+.offers-page h1 {
+  color: #96083a;
+  font-size: 3.7rem;
+  margin-bottom: 1rem;
+}
+ .offers-page p{
+  font-size: 1.5rem;
+  color: aqua;
+ }
+
+ .offers-page ul{
+  font-family: sans-serif;
+  color:purple;
+ }

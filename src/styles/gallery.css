@@ -1,0 +1,127 @@
+.gallery-container {
+  text-align: center;
+  padding: 40px 20px;
+  background: #fff5ff;
+}
+
+.gallery-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #e639af;
+  margin-bottom: 10px;
+}
+
+.gallery-subtitle {
+  font-size: 18px;
+  color: #c06ed6;
+  margin-bottom: 25px;
+}
+
+.gallery-grid {
+  display: grid;
+  margin-left: -30px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 65px;
+}
+
+.gallery-card {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.3s;
+  cursor: pointer;
+  background: white;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+.gallery-card:hover img {
+  transform: scale(1.07);
+}
+
+.gallery-card:hover {
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+}
+
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.lightbox-img {
+  max-width: 85%;
+  max-height: 90%;
+  border-radius: 12px;
+  animation: zoomIn 0.3s;
+}
+
+
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  font-size: 50px;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+}
+
+.left { left: 50px; }
+.right { right: 50px; }
+
+.caption {
+  color: white;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.view-btn {
+  display: block;
+  margin: 40px auto;
+  padding: 16px 28px;
+  background-color: #e639af;
+  color: white;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  
+  
+  position: relative;
+  z-index: 9999;
+  pointer-events: auto;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.6); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.fade { animation: fadeEffect 0.5s; }
+
+@keyframes fadeEffect {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 700px) {
+  .arrow { font-size: 32px; left: 20px; right: 20px; }
+  .caption { font-size: 15px; }
+}
