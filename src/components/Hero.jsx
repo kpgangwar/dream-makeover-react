@@ -1,4 +1,4 @@
-import VoiceAssistant from "./voiceAssistant";
+import VoiceAssistant from "./VoiceAssistant";
 import '../styles/hero.css';
 
 const Hero = ({ openModal }) => {
