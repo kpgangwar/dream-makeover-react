@@ -37,7 +37,7 @@
 
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 
-import Login from "./pages/Login";
+import Login from "./pages/login";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Services from "./components/Services";
