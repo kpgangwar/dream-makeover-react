@@ -41,7 +41,7 @@ import Login from "./pages/login";
 import Navbar from "./components/navbar";
 import Home from "./pages/home";
 import Services from "./components/services";
-import Contact from "./pages/contact";
+import Contact from "./pages/Contact";
 import Location from "./pages/location";
 import Offers from "./pages/offers";
 import Gallery from "./pages/gallery";
