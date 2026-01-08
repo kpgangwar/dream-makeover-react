@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/Offers.css'; // styling ke liye
+import '../styles/offers.css'; // styling ke liye
 
 const Offers = () => {
   return (
