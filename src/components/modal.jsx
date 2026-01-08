@@ -2,7 +2,7 @@
 
 
 import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
-import "../styles/Modal.css";
+import "../styles/modal.css";
 
 const Modal = ({ show, onClose }) => {
   if (!show) return null;
