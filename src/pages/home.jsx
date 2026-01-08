@@ -8,7 +8,7 @@
 
 import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
-import Modal from "../components/Modal";
+import Modal from "../components/modal";
 import Hero from "../components/Hero";
 
 import "../styles/home.css";
