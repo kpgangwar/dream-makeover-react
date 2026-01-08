@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from "react";
-import '../styles/Services.css';
+import '../styles/services.css';
 
 export default function App() {
   const [showForm, setShowForm] = useState(false);
