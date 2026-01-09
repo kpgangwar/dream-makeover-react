@@ -45,59 +45,59 @@
 // }
 
 
-import { useEffect } from "react";
+// import { useEffect } from "react";
 
-export default function VoiceAssistant() {
-  const greetings = [
-    "ड्रीम मेकओवर में आपका स्वागत है! बताइए, आज क्या प्लान है?",
-  "चलिए आज कुछ खूबसूरत बनाते हैं ।",
-  "किस सेवा से शुरुआत करेंगे?",
-  "हैलो दोस्त!  आइए, आपके लिए कुछ खास और मज़ेदार तैयार करें।",
-  "चलिए शुरुआत करते हैं ।",
-  ];
+// export default function VoiceAssistant() {
+//   const greetings = [
+//     "ड्रीम मेकओवर में आपका स्वागत है! बताइए, आज क्या प्लान है?",
+//   "चलिए आज कुछ खूबसूरत बनाते हैं ।",
+//   "किस सेवा से शुरुआत करेंगे?",
+//   "हैलो दोस्त!  आइए, आपके लिए कुछ खास और मज़ेदार तैयार करें।",
+//   "चलिए शुरुआत करते हैं ।",
+//   ];
 
-  useEffect(() => {
-    let voices = [];
+//   useEffect(() => {
+//     let voices = [];
 
-    const loadVoicesAndSpeak = () => {
-      voices = speechSynthesis.getVoices().filter(v => v.lang.includes("hi"));
-      if (!voices.length) voices = speechSynthesis.getVoices(); // fallback
+//     const loadVoicesAndSpeak = () => {
+//       voices = speechSynthesis.getVoices().filter(v => v.lang.includes("hi"));
+//       if (!voices.length) voices = speechSynthesis.getVoices(); // fallback
 
-      let index = 0;
+//       let index = 0;
 
-      const speakNext = () => {
-        if (index >= greetings.length) return; // सभी greetings बोल चुकी हैं
+//       const speakNext = () => {
+//         if (index >= greetings.length) return; // सभी greetings बोल चुकी हैं
 
-        const utterance = new SpeechSynthesisUtterance(greetings[index]);
-        const selectedVoice =
-          voices.find(v => v.name.toLowerCase().includes("female")) || voices[0];
-        utterance.voice = selectedVoice;
-        utterance.rate = 0.9;
-        utterance.pitch = 1;
-        utterance.volume = 1;
+//         const utterance = new SpeechSynthesisUtterance(greetings[index]);
+//         const selectedVoice =
+//           voices.find(v => v.name.toLowerCase().includes("female")) || voices[0];
+//         utterance.voice = selectedVoice;
+//         utterance.rate = 0.9;
+//         utterance.pitch = 1;
+//         utterance.volume = 1;
 
-        utterance.onend = () => {
-          index++;
-          speakNext(); // next greeting
-        };
+//         utterance.onend = () => {
+//           index++;
+//           speakNext(); // next greeting
+//         };
 
-        speechSynthesis.speak(utterance);
-      };
+//         speechSynthesis.speak(utterance);
+//       };
 
-      speakNext(); // start speaking
-    };
+//       speakNext(); // start speaking
+//     };
 
-    // अगर voices अभी load नहीं हुए तो wait करें
-    if (speechSynthesis.getVoices().length === 0) {
-      speechSynthesis.onvoiceschanged = loadVoicesAndSpeak;
-    } else {
-      loadVoicesAndSpeak();
-    }
+//     // अगर voices अभी load नहीं हुए तो wait करें
+//     if (speechSynthesis.getVoices().length === 0) {
+//       speechSynthesis.onvoiceschanged = loadVoicesAndSpeak;
+//     } else {
+//       loadVoicesAndSpeak();
+//     }
 
-  }, []);
+//   }, []);
 
-  return null; // UI नहीं, सिर्फ voice
-}
+//   return null; // UI नहीं, सिर्फ voice
+// }
 
 
 
@@ -168,3 +168,60 @@ export default function VoiceAssistant() {
 //     </div>
 //   );
 // }
+
+
+import { useEffect } from "react";
+
+export default function VoiceAssistant() {
+  const greetings = [
+    "हाय! ड्रीम मेकओवर में आपका बहुत बहुत स्वागत है!",
+    "आज आप बहुत खूबसूरत दिखने वाली हैं।",
+    "ब्राइडल, फेशियल या हेयर स्टाइल… क्या ट्राय करना है?",
+    "रिलैक्स कीजिए, बाकी सब हम संभाल लेंगे।",
+    "चलिए शुरू करते हैं!"
+  ];
+
+  useEffect(() => {
+    const speak = () => {
+      let voices = speechSynthesis.getVoices();
+
+      // Young & soft female style voice
+      const voice =
+        voices.find(v => v.lang.includes("hi") && v.name.toLowerCase().includes("female")) ||
+        voices.find(v => v.name.toLowerCase().includes("female")) ||
+        voices.find(v => v.lang.includes("en")) ||
+        voices[0];
+
+      let index = 0;
+
+      const speakNext = () => {
+        if (index >= greetings.length) return;
+
+        const utter = new SpeechSynthesisUtterance(greetings[index]);
+        utter.voice = voice;
+
+        // 🎀 young, soft, cute tone
+        utter.rate = 0.95;   // slightly fast → young energy
+        utter.pitch = 1.6;  // high pitch → girl voice
+        utter.volume = 1;
+
+        utter.onend = () => {
+          index++;
+          setTimeout(speakNext, 500);
+        };
+
+        speechSynthesis.speak(utter);
+      };
+
+      speakNext();
+    };
+
+    if (speechSynthesis.getVoices().length === 0) {
+      speechSynthesis.onvoiceschanged = speak;
+    } else {
+      speak();
+    }
+  }, []);
+
+  return null;
+}
