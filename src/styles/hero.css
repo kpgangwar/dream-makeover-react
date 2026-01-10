@@ -298,7 +298,7 @@
     height: 100vh;          /* 🔥 full screen hero */
     flex-direction: column;
     text-align: center;
-    padding: 20px 20px 30px;
+    padding: 10px 20px 30px;
     justify-content: center;
     gap: 25px;             /* 🔥 balanced spacing */
   }

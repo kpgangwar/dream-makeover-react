@@ -53,7 +53,8 @@
 .hamburger span {
   width: 26px;
   height: 3px;
-  background: #c9a646;
+  /* background: #c9a646; */
+  background: white;
   border-radius: 5px;
 }
 
