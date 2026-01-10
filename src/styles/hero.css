@@ -125,7 +125,7 @@
   height: 300px;
   width: 300px;
   border-radius: 50%;
-  filter: drop-shadow(0 0 30px gold);
+  filter: drop-shadow(0 0 30px rgb(255, 215, 0));
   animation: float 3s ease-in-out infinite;
 }
 
@@ -151,7 +151,7 @@
   .hero-right img {
     width: 260px;
     height: 260px;
-    margin-top: 30px;
+    /* margin-top: -90px; */
   }
 
   .hero h1 {

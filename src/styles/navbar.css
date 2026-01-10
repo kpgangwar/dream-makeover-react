@@ -14,7 +14,7 @@
 .logo {
   color: #c9a646;
   font-weight: bold;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   font-size: 22px;
 }
 
@@ -28,6 +28,13 @@
   color: white;
   transition: 0.3s;
   text-decoration: none;
+   padding: 15px 25px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  white-space: nowrap;      /* 🔥 text wrap band */
+  overflow: visible;
+  text-align: left;
 }
 
 .nav-links a:hover {
@@ -72,7 +79,7 @@
     display: flex;
   }
 
-  .nav-links {
+  /* .nav-links {
     position: absolute;
     top: 55px;
     right: 0;
@@ -84,9 +91,27 @@
     transform: translateY(-200%);
     transition: 0.4s ease;
     gap: 10px;
-  }
+  } */
+
+  .nav-links {
+  position: fixed;
+  top: 50px;
+  right: -100%;
+  width: 260px;          /* 🔥 menu ko full width */
+  height: 100vh;
+  background: #111;
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  transition: 0.3s ease;
+   width: 75%;      /* 🔥 mobile ke liye wide */
+    max-width: 300px;
+  z-index: 999;
+}
 
   .nav-links.open {
+    right: 0;
     transform: translateY(0);
   }
+  
 }
