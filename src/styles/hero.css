@@ -295,6 +295,8 @@
 @media (max-width: 768px) {
 
   .hero {
+     margin-top: -20px;   /* 🔥 pulls hero up under navbar */
+    padding-top: 20px;
     height: 100vh;          /* 🔥 full screen hero */
     flex-direction: column;
     text-align: center;
