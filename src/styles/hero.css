@@ -1,8 +1,8 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+} */
 /*  
 .hero {
   height: 100vh;
@@ -46,7 +46,7 @@
   transform: scale(1.05);
 }  */
 
-
+/* 
 .hero {
   height: 100vh;
   background: linear-gradient(120deg, #0b0b0b, #1a1a1a);
@@ -123,7 +123,7 @@
 
 .hero-right img {
   height: 300px;
-   /* gap: 10px;  */
+  
   width: 300px;
   border-radius: 50%;
   filter: drop-shadow(0 0 30px rgb(255, 215, 0));
@@ -152,7 +152,7 @@
   .hero-right img {
     width: 260px;
     height: 280px;
-    /* margin-top: -90px; */
+   
   }
 
   .hero h1 {
@@ -164,4 +164,130 @@
   .hero h1 span {
     color: red;
   }
-} 
+}  */
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== HERO DESKTOP ===== */
+
+.hero {
+  height: 100vh;
+  background: linear-gradient(120deg, #0b0b0b, #1a1a1a);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8%;
+  color: white;
+}
+
+.hero-left {
+  width: 50%;
+}
+
+.hero h1 {
+  font-size: 4.5rem;
+  color: #c9a646;
+  margin-bottom: 15px;
+}
+
+.hero h1 span {
+  color: white;
+  text-shadow: 0 0 20px gold;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.btn-book {
+  background: linear-gradient(45deg, #c9a646, #f0cf6b);
+  border: none;
+  padding: 14px 40px;
+  color: black;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 20px;
+  box-shadow: 0 0 20px rgba(201,166,70,0.7);
+  transition: 0.3s ease;
+}
+
+.btn-book:hover {
+  transform: scale(1.05);
+}
+
+/* ===== HERO IMAGE ===== */
+
+.hero-right {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-right img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  filter: drop-shadow(0 0 30px rgb(255, 215, 0));
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
+/* ===== MOBILE FIX ===== */
+
+@media (max-width: 768px) {
+
+  .hero {
+    height: auto;                  /* 🔥 100vh removed */
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+    justify-content: flex-start;
+    gap: 15px;                     /* 🔥 tight spacing */
+  }
+
+  .hero-left,
+  .hero-right {
+    width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+
+  .btn-book {
+    margin-top: 12px;             /* 🔥 no big gap */
+    padding: 12px 32px;
+    font-size: 1rem;
+  }
+
+  .hero-right {
+    margin-top: 10px;
+  }
+
+  .hero-right img {
+    width: 260px;
+    height: 260px;
+    margin-top: 0;
+  }
+}
