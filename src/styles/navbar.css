@@ -1,3 +1,4 @@
+/* ===== NAVBAR ===== */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -8,17 +9,16 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  transition: 0.4s ease;
 }
 
+/* Logo */
 .logo {
   color: #c9a646;
   font-weight: bold;
-  /* letter-spacing: px; */
   font-size: 22px;
 }
 
-/* Desktop menu */
+/* Desktop Menu */
 .nav-links {
   display: flex;
   gap: 22px;
@@ -26,39 +26,23 @@
 
 .nav-links a {
   color: white;
-  transition: 0.3s;
   text-decoration: none;
-   padding: 15px 25px;
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-  white-space: nowrap;      /* 🔥 text wrap band */
-  overflow: visible;
-  text-align: left;
+  padding: 12px 18px;
+  font-size: 17px;
+  white-space: nowrap;
 }
 
 .nav-links a:hover {
-  color: hsl(136, 55%, 53%);
-  transform: scale(1.1);
+  color: #c9a646;
 }
 
-/* Active Page */
+/* Active */
 .nav-links a.active {
   color: #c9a646;
   border-bottom: 2px solid #c9a646;
-  transform: scale(1.12);
 }
 
-/* Scroll effect */
-.navbar.scrolled {
-  background: rgba(0, 0, 0, 0.85);
-  backdrop-filter: blur(6px);
-  padding: 10px 35px;
-  border-bottom: 1px solid #c9a64660;
-  box-shadow: 0px 3px 12px rgba(255,255,255,0.05);
-}
-
-/* Hamburger */
+/* ===== Hamburger ===== */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -73,45 +57,57 @@
   border-radius: 5px;
 }
 
-/* 📱 Mobile */
+/* ===== MOBILE ===== */
 @media (max-width: 768px) {
+
   .hamburger {
     display: flex;
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1001;
   }
 
-  /* .nav-links {
-    position: absolute;
-    top: 55px;
-    right: 0;
-    background: #000;
-    flex-direction: column;
-    width: 10%;
-    text-align: center;
-    padding: 0px 0;
-    transform: translateY(-200%);
-    transition: 0.4s ease;
-    gap: 10px;
-  } */
+  .logo {
+    margin: 0 auto;
+  }
 
+  /* Dropdown menu */
   .nav-links {
   position: fixed;
-  top: 50px;
-  right: -100%;
-  width: 260px;          /* 🔥 menu ko full width */
-  height: 100vh;
+  top: 60px;
+  left: 15px;
+
+  width: 260px;                 /* 🔥 enough space for full words */
   background: #111;
+  border-radius: 12px;
+  padding: 10px 0;
+
   display: flex;
   flex-direction: column;
-  padding-top: 30px;
-  transition: 0.3s ease;
-   width: 75%;      /* 🔥 mobile ke liye wide */
-    max-width: 300px;
+  align-items: stretch;        /* 🔥 sab same line me */
+
+  box-shadow: 0 0 25px rgba(0,0,0,0.7);
+
+  transform: scale(0);
+  transform-origin: top left;
+  transition: 0.25s ease;
   z-index: 999;
 }
 
+
   .nav-links.open {
-    right: 0;
-    transform: translateY(0);
+    transform: scale(1);
   }
-  
+
+ .nav-links a {
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+  text-align: left;           /* 🔥 sab ek line */
+  white-space: nowrap;        /* 🔥 wrap band */
+}
+
 }
