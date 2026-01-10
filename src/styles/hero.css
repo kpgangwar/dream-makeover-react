@@ -253,12 +253,10 @@
 @media (max-width: 768px) {
 
   .hero {
-    height: auto;                  /* 🔥 100vh removed */
-    flex-direction: column;
-    text-align: center;
-    padding: 30px 20px;
-    justify-content: flex-start;
-    gap: 15px;                     /* 🔥 tight spacing */
+    height: 100vh;              /* 🔥 hero full screen */
+    min-height: 100vh;
+    overflow: hidden;
+    justify-content: center;
   }
 
   .hero-left,

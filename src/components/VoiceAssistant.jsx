@@ -169,27 +169,33 @@
 //   );
 // }
 
-
 import { useEffect } from "react";
 
 export default function VoiceAssistant() {
+
   const greetings = [
     "हाय! ड्रीम मेकओवर में आपका बहुत बहुत स्वागत है!",
     "आज आप बहुत खूबसूरत दिखने वाली हैं।",
-    "ब्राइडल, फेशियल या हेयर स्टाइल… क्या ट्राय करना है?",
+    "ब्राइडल, फेशियल या हेयर स्टाइल, क्या ट्राय करना है?",
     "रिलैक्स कीजिए, बाकी सब हम संभाल लेंगे।",
     "चलिए शुरू करते हैं!"
   ];
 
   useEffect(() => {
-    const speak = () => {
-      let voices = speechSynthesis.getVoices();
 
-      // Young & soft female style voice
+    let spoken = false;   // 🔥 prevent repeat
+
+    const startVoice = () => {
+      if (spoken) return;
+      spoken = true;
+
+      const voices = speechSynthesis.getVoices();
+
+      // Best soft female-like voice
       const voice =
-        voices.find(v => v.lang.includes("hi") && v.name.toLowerCase().includes("female")) ||
-        voices.find(v => v.name.toLowerCase().includes("female")) ||
-        voices.find(v => v.lang.includes("en")) ||
+        voices.find(v => v.lang === "hi-IN") ||
+        voices.find(v => v.lang === "en-IN") ||
+        voices.find(v => v.lang.startsWith("en")) ||
         voices[0];
 
       let index = 0;
@@ -199,15 +205,13 @@ export default function VoiceAssistant() {
 
         const utter = new SpeechSynthesisUtterance(greetings[index]);
         utter.voice = voice;
-
-        // 🎀 young, soft, cute tone
-        utter.rate = 0.95;   // slightly fast → young energy
-        utter.pitch = 1.6;  // high pitch → girl voice
+        utter.rate = 0.95;
+        utter.pitch = 1.4;
         utter.volume = 1;
 
         utter.onend = () => {
           index++;
-          setTimeout(speakNext, 500);
+          setTimeout(speakNext, 400);
         };
 
         speechSynthesis.speak(utter);
@@ -216,11 +220,21 @@ export default function VoiceAssistant() {
       speakNext();
     };
 
-    if (speechSynthesis.getVoices().length === 0) {
-      speechSynthesis.onvoiceschanged = speak;
-    } else {
-      speak();
-    }
+    // 🔥 Mobile + Chrome require user touch
+    const enableOnTouch = () => {
+      startVoice();
+      window.removeEventListener("click", enableOnTouch);
+      window.removeEventListener("touchstart", enableOnTouch);
+    };
+
+    window.addEventListener("click", enableOnTouch);
+    window.addEventListener("touchstart", enableOnTouch);
+
+    return () => {
+      window.removeEventListener("click", enableOnTouch);
+      window.removeEventListener("touchstart", enableOnTouch);
+    };
+
   }, []);
 
   return null;
