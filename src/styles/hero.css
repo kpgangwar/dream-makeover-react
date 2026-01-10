@@ -123,6 +123,7 @@
 
 .hero-right img {
   height: 300px;
+   /* gap: 10px;  */
   width: 300px;
   border-radius: 50%;
   filter: drop-shadow(0 0 30px rgb(255, 215, 0));
@@ -150,7 +151,7 @@
 
   .hero-right img {
     width: 260px;
-    height: 260px;
+    height: 280px;
     /* margin-top: -90px; */
   }
 
