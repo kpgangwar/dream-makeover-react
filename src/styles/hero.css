@@ -249,14 +249,16 @@
 }
 
 /* ===== MOBILE FIX ===== */
-
+/* 
 @media (max-width: 768px) {
 
   .hero {
-    height: 100vh;              /* 🔥 hero full screen */
-    min-height: 100vh;
-    overflow: hidden;
-    justify-content: center;
+    height: auto;                  
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+    justify-content: flex-start;
+    gap: 15px;                     
   }
 
   .hero-left,
@@ -274,7 +276,7 @@
   }
 
   .btn-book {
-    margin-top: 12px;             /* 🔥 no big gap */
+    margin-top: 12px;             
     padding: 12px 32px;
     font-size: 1rem;
   }
@@ -288,4 +290,47 @@
     height: 260px;
     margin-top: 0;
   }
+} */
+
+@media (max-width: 768px) {
+
+  .hero {
+    height: 100vh;          /* 🔥 full screen hero */
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+    justify-content: center;
+    gap: 25px;             /* 🔥 balanced spacing */
+  }
+
+  .hero-left,
+  .hero-right {
+    width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 2.6rem;
+    margin-bottom: 10px;
+  }
+
+  .hero p {
+    font-size: 1.05rem;
+    margin-bottom: 18px;
+  }
+
+  .btn-book {
+    margin-top: 18px;      /* 🔥 breathing space */
+    padding: 13px 34px;
+    font-size: 1rem;
+  }
+
+  .hero-right {
+    margin-top: 20px;     /* 🔥 space before image */
+  }
+
+  .hero-right img {
+    width: 260px;
+    height: 260px;
+  }
 }
+
