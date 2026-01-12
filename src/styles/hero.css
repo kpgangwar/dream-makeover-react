@@ -97,12 +97,13 @@
   
   .hero-left {
     margin-top: -120px;
-    width: 40%;
+    width: 50%;
   
   }
   
   
   .hero-right {
+    width: 50%;
     margin-top: -5px;
     justify-content: center;
   }
