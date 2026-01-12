@@ -4,10 +4,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-.hero {
-  display: flex !important;
-  flex-direction: row !important;
-}
+
 
 /* ===== BIG SLIDING BANNER ===== */
 .top-banner {
@@ -108,12 +105,12 @@
   } */
    /* Text upar dikhe */
   .hero-left {
-    margin-top: -40px;
+    margin-top: -90px;
   }
   
    /* Model image ko neeche le aao */
   .hero-right {
-    margin-top: 25px;
+    margin-top: -5px;
     justify-content: center;
   }
 
