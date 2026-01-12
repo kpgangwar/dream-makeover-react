@@ -72,57 +72,7 @@
   animation: float 3s ease-in-out infinite;
 }
 
-.btn-book {
-  margin-top: -15px;
-  padding: 16px 42px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #1a1a1a;
-  background: linear-gradient(135deg, #ffd27d, #c9a646, #ffd27d);
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  letter-spacing: 0.5px;
-  box-shadow:
-    0 0 20px rgba(201, 166, 70, 0.6),
-    0 0 40px rgba(255, 210, 125, 0.3);
-  transition: all 0.35s ease;
-  position: relative;
-  overflow: hidden;
-}
 
-/* Soft shine animation */
-.btn-book::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -60%;
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(255, 255, 255, 0.6),
-    transparent
-  );
-  transform: skewX(-25deg);
-  transition: 0.6s;
-}
-
-.btn-book:hover::before {
-  left: 120%;
-}
-
-.btn-book:hover {
-  transform: scale(1.07);
-  box-shadow:
-    0 0 25px rgba(201, 166, 70, 0.8),
-    0 0 50px rgba(255, 210, 125, 0.5);
-}
-
-.btn-book:active {
-  transform: scale(0.98);
-}
 
 @keyframes float {
   0% { transform: translateY(0); }
@@ -134,25 +84,42 @@
 @media (max-width: 768px) {
 
   .top-banner {
-    height: 180px;   /* Mobile banner */
+    height: 160px;   /* Mobile banner */
   }
 
-  .hero {
-    min-height: calc(100vh - 180px);
+  /* .hero {
+    min-height: calc(100vh - 140px);
     flex-direction: column;
     text-align: center;
     padding: 30px 20px;
     justify-content: center;
     gap: 20px;
+  } */
+
+  .hero {
+    min-height: calc(100vh - 140px);
+    padding: 25px 18px 40px;
+    justify-content: flex-start;
   }
 
-  .hero-left,
+  /* .hero-left
   .hero-right {
     width: 100%;
+  } */
+   /* Text upar dikhe */
+  .hero-left {
+    margin-top: -40px;
+  }
+  
+   /* Model image ko neeche le aao */
+  .hero-right {
+    margin-top: 25px;
+    justify-content: center;
   }
 
   .hero h1 {
     font-size: 2.6rem;
+     line-height: 1.1;
   }
 
   .hero p {
@@ -160,11 +127,33 @@
   }
 
   .hero-right img {
+    margin-top: -50px;
     width: 240px;
-    height: 240px;
+    height: 300px;
   }
   .btn-book {
-    padding: 14px 34px;
-    font-size: 1rem;
-  }
+  padding: 14px 34px;
+  font-size: 1rem;
+  margin-top: 16px;
+  border-radius: 20px;
+  background-color: aqua;
+  color: #003333;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.btn-book:hover {
+  background: linear-gradient(135deg, #00e5ff, #00bcd4);
+  color: white;
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.8);
+  transform: scale(1.05);
+}
+
+/* Click effect */
+.btn-book:active {
+  transform: scale(0.97);
+}
+
 }
