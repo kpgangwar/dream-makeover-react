@@ -58,6 +58,7 @@
   justify-content: flex-end;
 }
 
+
 .hero-right img {
   width: 300px;
   height: 300px;
@@ -96,11 +97,14 @@
     padding: 30px 16px;
   }
 
-  .hero-left,
+  
   .hero-right {
     width: 50%;      
   }
-
+   .hero-left{
+    margin-top: 0px;
+  max-width: 40%;
+}
   .hero h1 {
     font-size: 3.2rem;
   }
@@ -111,7 +115,7 @@
   }
 
   .hero-right img {
-    width: 180px;
-    height: 250px;
+    width: 220px;
+    height: 280px;
   }
 }
