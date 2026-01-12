@@ -1,15 +1,31 @@
 
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+.hero {
+  display: flex !important;
+  flex-direction: row !important;
+}
+
+/* ===== BIG SLIDING BANNER ===== */
+.top-banner {
+  width: 100%;
+  height: 260px;              /* Desktop banner height */
+  overflow: hidden;
+  background: black;
+}
+
+.top-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 /* ===== HERO DESKTOP ===== */
-
 .hero {
-  height: 100vh;
+  min-height: calc(100vh - 260px);   /* banner height minus */
   background: linear-gradient(120deg, #0b0b0b, #1a1a1a);
   display: flex;
   align-items: center;
@@ -18,9 +34,11 @@
   color: white;
 }
 
-.hero-left {
-  width: 50%;
+.hero-left,
+.hero-right {
+  width: 50% !important;
 }
+
 
 .hero h1 {
   font-size: 4.5rem;
@@ -39,30 +57,11 @@
   line-height: 1.6;
 }
 
-.btn-book {
-  background: linear-gradient(45deg, #c9a646, #f0cf6b);
-  border: none;
-  padding: 14px 40px;
-  color: black;
-  font-size: 1.1rem;
-  border-radius: 50px;
-  cursor: pointer;
-  font-weight: bold;
-  margin-top: 20px;
-  box-shadow: 0 0 20px rgba(201,166,70,0.7);
-  transition: 0.3s ease;
-}
-
-.btn-book:hover {
-  transform: scale(1.05);
-}
-
 /* ===== HERO IMAGE ===== */
-
 .hero-right {
   width: 50%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end !important;
 }
 
 .hero-right img {
@@ -73,25 +72,78 @@
   animation: float 3s ease-in-out infinite;
 }
 
+.btn-book {
+  margin-top: -15px;
+  padding: 16px 42px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  background: linear-gradient(135deg, #ffd27d, #c9a646, #ffd27d);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  box-shadow:
+    0 0 20px rgba(201, 166, 70, 0.6),
+    0 0 40px rgba(255, 210, 125, 0.3);
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Soft shine animation */
+.btn-book::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
+  transform: skewX(-25deg);
+  transition: 0.6s;
+}
+
+.btn-book:hover::before {
+  left: 120%;
+}
+
+.btn-book:hover {
+  transform: scale(1.07);
+  box-shadow:
+    0 0 25px rgba(201, 166, 70, 0.8),
+    0 0 50px rgba(255, 210, 125, 0.5);
+}
+
+.btn-book:active {
+  transform: scale(0.98);
+}
+
 @keyframes float {
   0% { transform: translateY(0); }
   50% { transform: translateY(-15px); }
   100% { transform: translateY(0); }
 }
 
-
-
+/* ===== MOBILE ===== */
 @media (max-width: 768px) {
 
+  .top-banner {
+    height: 180px;   /* Mobile banner */
+  }
+
   .hero {
-     margin-top: -20px;   /* 🔥 pulls hero up under navbar */
-    padding-top: 20px;
-    height: 100vh;          /* 🔥 full screen hero */
+    min-height: calc(100vh - 180px);
     flex-direction: column;
     text-align: center;
-    padding: 10px 20px 30px;
+    padding: 30px 20px;
     justify-content: center;
-    gap: 25px;             /* 🔥 balanced spacing */
+    gap: 20px;
   }
 
   .hero-left,
@@ -101,43 +153,18 @@
 
   .hero h1 {
     font-size: 2.6rem;
-    margin-bottom: 10px;
   }
 
   .hero p {
-    font-size: 1.05rem;
-    margin-bottom: 18px;
-  }
-
-  .btn-book {
-    margin-top: 18px;      /* 🔥 breathing space */
-    padding: 13px 34px;
     font-size: 1rem;
   }
 
-  .hero-right {
-    margin-top: 20px;     /* 🔥 space before image */
-  }
-
   .hero-right img {
-    width: 260px;
-    height: 260px;
+    width: 240px;
+    height: 240px;
+  }
+  .btn-book {
+    padding: 14px 34px;
+    font-size: 1rem;
   }
 }
-
-
-/* ===== HERO banner ===== */
-
-.top-banner {
-  width: 100%;
-  height: 220px;
-  overflow: hidden;
-}
-
-.top-banner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-
