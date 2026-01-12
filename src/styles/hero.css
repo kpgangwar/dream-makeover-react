@@ -33,7 +33,7 @@
 
 .hero-left,
 .hero-right {
-  width: 50% !important;
+  width: 50% 
 }
 
 
@@ -84,28 +84,20 @@
     height: 160px;   /* Mobile banner */
   }
 
-  /* .hero {
-    min-height: calc(100vh - 140px);
-    flex-direction: column;
-    text-align: center;
-    padding: 30px 20px;
-    justify-content: center;
-    gap: 20px;
-  } */
+ 
 
   .hero {
     min-height: calc(100vh - 140px);
     padding: 25px 18px 40px;
     justify-content: flex-start;
+      min-height: calc(100vh - 160px);   
   }
 
-  /* .hero-left
-  .hero-right {
-    width: 100%;
-  } */
+  
    /* Text upar dikhe */
   .hero-left {
     margin-top: -90px;
+  
   }
   
    /* Model image ko neeche le aao */
