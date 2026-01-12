@@ -19,10 +19,15 @@ const Modal = ({ show, onClose }) => {
           </a>
 
           <a
-            href="https://wa.me/918909087801"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="modal-btn whatsapp"
+            // href="https://wa.me/918909087801"
+            // target="_blank"
+            // rel="noopener noreferrer"
+            // className="modal-btn whatsapp"
+
+             href="https://wa.me/918909087801?text=Hello%20Dream%20Makeover!%20I%20want%20to%20book%20a%20beauty%20service.%20Please%20share%20details."
+  target="_blank"
+  rel="noopener noreferrer"
+  className="modal-btn whatsapp"
           >
             <FaWhatsapp style={{ marginRight: "8px" }} /> WhatsApp
           </a>

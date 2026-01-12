@@ -5,7 +5,9 @@
   align-items: flex-start;
   gap: 20px;
   padding: 80px 20px;
-  background-color: #0d0d0d; /* dark background */
+  /* background-color: #0d0d0d;  */
+  background: linear-gradient(135deg, #fff0f6, #ffe6f0);
+
   flex-wrap: wrap;
   color: #f0f0f0; /* default text color */
 }
