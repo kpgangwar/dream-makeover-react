@@ -77,11 +77,11 @@
   100% { transform: translateY(0); }
 }
 
-/* ===== MOBILE ===== */
+/* 
 @media (max-width: 768px) {
 
   .top-banner {
-    height: 160px;   /* Mobile banner */
+    height: 160px;  
   }
 
  
@@ -94,13 +94,13 @@
   }
 
   
-   /* Text upar dikhe */
+  
   .hero-left {
     margin-top: -90px;
   
   }
   
-   /* Model image ko neeche le aao */
+  
   .hero-right {
     margin-top: -5px;
     justify-content: center;
@@ -132,7 +132,7 @@
   transition: all 0.3s ease;
 }
 
-/* Hover effect */
+
 .btn-book:hover {
   background: linear-gradient(135deg, #00e5ff, #00bcd4);
   color: white;
@@ -140,9 +140,60 @@
   transform: scale(1.05);
 }
 
-/* Click effect */
+
 .btn-book:active {
   transform: scale(0.97);
 }
 
+}  */
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  .top-banner {
+    height: 140px;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: auto;        /* vh hata diya */
+    padding: 20px 16px 40px;
+  }
+
+  .hero-left,
+  .hero-right {
+    width: 100%;
+  }
+
+  .hero-left {
+    margin-top: 0;
+  }
+
+  .hero-right {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-right img {
+    width: 220px;
+    height: 220px;
+    margin: 0;
+  }
+
+  .hero h1 {
+    font-size: 2.4rem;
+    line-height: 1.1;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+    margin-top: 10px;
+  }
+
+  .btn-book {
+    margin-top: 16px;
+  }
 }
