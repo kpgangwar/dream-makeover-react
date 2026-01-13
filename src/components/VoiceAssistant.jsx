@@ -168,7 +168,6 @@
 //     </div>
 //   );
 // }
-
 import { useEffect, useRef } from "react";
 
 export default function VoiceAssistant() {
@@ -181,19 +180,19 @@ export default function VoiceAssistant() {
     "चलिए शुरू करते हैं!"
   ];
 
-  const spokenRef = useRef(false);
+  const hasSpoken = useRef(false);
 
   useEffect(() => {
 
-    const startVoice = () => {
-      if (spokenRef.current) return;
-      spokenRef.current = true;
+    const speakAll = () => {
+      if (hasSpoken.current) return;
+      hasSpoken.current = true;
 
-      // Wait for voices to be fully ready
-      const loadAndSpeak = () => {
+      const waitForVoices = () => {
         const voices = speechSynthesis.getVoices();
+
         if (!voices.length) {
-          setTimeout(loadAndSpeak, 300);
+          setTimeout(waitForVoices, 300);
           return;
         }
 
@@ -203,34 +202,35 @@ export default function VoiceAssistant() {
           voices.find(v => v.lang.startsWith("en")) ||
           voices[0];
 
-        let i = 0;
+        speechSynthesis.cancel(); // hard reset
 
-        const speakNext = () => {
-          if (i >= greetings.length) return;
+        let index = 0;
 
-          const utter = new SpeechSynthesisUtterance(greetings[i]);
-          utter.voice = voice;
-          utter.rate = 0.95;
-          utter.pitch = 1.3;
-          utter.volume = 1;
+        const playNext = () => {
+          if (index >= greetings.length) return;
 
-          utter.onend = () => {
-            i++;
-            setTimeout(speakNext, 500);
+          const u = new SpeechSynthesisUtterance(greetings[index]);
+          u.voice = voice;
+          u.rate = 0.95;
+          u.pitch = 1.3;
+          u.volume = 1;
+
+          u.onend = () => {
+            index++;
+            setTimeout(playNext, 400);
           };
 
-          speechSynthesis.speak(utter);
+          speechSynthesis.speak(u);
         };
 
-        speechSynthesis.cancel();
-        speakNext();
+        playNext();
       };
 
-      loadAndSpeak();
+      waitForVoices();
     };
 
     const enable = () => {
-      startVoice();
+      speakAll();
       window.removeEventListener("click", enable);
       window.removeEventListener("touchstart", enable);
     };
@@ -242,6 +242,7 @@ export default function VoiceAssistant() {
       window.removeEventListener("click", enable);
       window.removeEventListener("touchstart", enable);
     };
+
   }, []);
 
   return null;
