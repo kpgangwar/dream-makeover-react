@@ -64,7 +64,9 @@
   height: 300px;
   border-radius: 50%;
   filter: drop-shadow(0 0 30px gold);
+  animation: float 4s ease-in-out infinite;
 }
+
 
 /* Button */
 .btn-book {
@@ -118,4 +120,9 @@
     width: 180px;
     height: 350px;
   }
+}
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+  100% { transform: translateY(0); }
 }
