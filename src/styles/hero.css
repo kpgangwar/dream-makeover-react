@@ -10,6 +10,17 @@
   height: 260px;
   overflow: hidden;
   background: black;
+  object-fit: contain;
+  background: black;
+}
+
+  .top-banner video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  object-fit: contain;
+  background: black;
 }
 
 .top-banner img {
@@ -95,7 +106,14 @@
   }
 
 
-
+  .top-banner video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  object-fit: contain;
+  background: black;
+}
 
   .hero {
      min-height: 70vh;
@@ -130,9 +148,4 @@
   100% { transform: translateY(0); }
 }
 
-  .top-banner video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
+
