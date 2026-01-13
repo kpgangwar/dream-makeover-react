@@ -1,14 +1,40 @@
 
+         /*image banner*/
 
+
+
+// import { useEffect, useState } from "react";
 // import VoiceAssistant from "./VoiceAssistant";
 // import "../styles/hero.css";
 
-// const Hero = ({ openModal }) => {
+// const banners = [
+//   // "/images/banner/makeup1.jpg",
+//   // "/images/banner/makeup2.jpg",
+//   // "/images/banner/makeup3.jpg",
+//   "/images/banner/image.png",
+// ];
+
+
+
+
+
+// function Hero({ openModal }) {
+//   const [index, setIndex] = useState(0);
+
+//   useEffect(() => {
+//     const timer = setInterval(() => {
+//       setIndex((prev) => (prev + 1) % banners.length);
+//     }, 3000);
+//     return () => clearInterval(timer);
+//   }, []);
+
 //   return (
 //     <>
 //       <VoiceAssistant />
 
-    
+//       <div className="top-banner">
+//         <img src={banners[index]} alt="Dream Makeover Banner" />
+//       </div>
 
 //       <section className="hero">
 //         <div className="hero-left">
@@ -26,44 +52,42 @@
 //           </button>
 //         </div>
 
-//         <div className="hero-right">        
-//              <img src="/images/myphoto.jpg" alt="Makeup Model" />
-//         </div>       </section>     </>
+//         <div className="hero-right">
+//           <img src="/images/myphoto.jpg" alt="Makeup Model" />
+//         </div>
+//       </section>
+//     </>
 //   );
-// };
+// }
 
 // export default Hero;
 
 
-import { useEffect, useState } from "react";
-import VoiceAssistant from "./VoiceAssistant";
-import "../styles/hero.css";
 
-const banners = [
-  "/images/banner/makeup1.jpg",
-  "/images/banner/makeup2.jpg",
-  "/images/banner/makeup3.jpg",
-  "/images/banner/makeup4.jpg",
-];
+
+             /*video banner*/
+
+             
+import "../styles/hero.css";
+ import VoiceAssistant from "./VoiceAssistant";
 
 function Hero({ openModal }) {
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setIndex((prev) => (prev + 1) % banners.length);
-    }, 3000);
-    return () => clearInterval(timer);
-  }, []);
-
   return (
     <>
       <VoiceAssistant />
 
+      {/* TOP VIDEO BANNER */}
       <div className="top-banner">
-        <img src={banners[index]} alt="Dream Makeover Banner" />
+        <video
+          src="/images/bannervideos/shopvideo.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+        />
       </div>
 
+      {/* HERO SECTION */}
       <section className="hero">
         <div className="hero-left">
           <h1>
@@ -89,3 +113,6 @@ function Hero({ openModal }) {
 }
 
 export default Hero;
+
+
+
