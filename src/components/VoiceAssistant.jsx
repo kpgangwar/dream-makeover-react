@@ -168,29 +168,28 @@
 //     </div>
 //   );
 // }
+
 import { useEffect, useRef } from "react";
 
 export default function VoiceAssistant() {
 
-  const greetings = [
-    "हाय! ड्रीम मेकओवर में आपका बहुत बहुत स्वागत है!",
-    "आज आप बहुत खूबसूरत दिखने वाली हैं।",
-    "ब्राइडल, फेशियल या हेयर स्टाइल, क्या ट्राय करना है?",
-    "रिलैक्स कीजिए, बाकी सब हम संभाल लेंगे।",
-    "चलिए शुरू करते हैं!"
-  ];
+  const text =
+    "हाय! ड्रीम मेकओवर में आपका बहुत बहुत स्वागत है। " +
+    "आज आप बहुत खूबसूरत दिखने वाली हैं। " +
+    "ब्राइडल, फेशियल या हेयर स्टाइल, क्या ट्राय करना है? " +
+    "रिलैक्स कीजिए, बाकी सब हम संभाल लेंगे। " +
+    "चलिए शुरू करते हैं!";
 
-  const hasSpoken = useRef(false);
+  const spoken = useRef(false);
 
   useEffect(() => {
 
-    const speakAll = () => {
-      if (hasSpoken.current) return;
-      hasSpoken.current = true;
+    const speak = () => {
+      if (spoken.current) return;
+      spoken.current = true;
 
       const waitForVoices = () => {
         const voices = speechSynthesis.getVoices();
-
         if (!voices.length) {
           setTimeout(waitForVoices, 300);
           return;
@@ -202,35 +201,21 @@ export default function VoiceAssistant() {
           voices.find(v => v.lang.startsWith("en")) ||
           voices[0];
 
-        speechSynthesis.cancel(); // hard reset
+        const utter = new SpeechSynthesisUtterance(text);
+        utter.voice = voice;
+        utter.rate = 0.95;
+        utter.pitch = 1.3;
+        utter.volume = 1;
 
-        let index = 0;
-
-        const playNext = () => {
-          if (index >= greetings.length) return;
-
-          const u = new SpeechSynthesisUtterance(greetings[index]);
-          u.voice = voice;
-          u.rate = 0.95;
-          u.pitch = 1.3;
-          u.volume = 1;
-
-          u.onend = () => {
-            index++;
-            setTimeout(playNext, 400);
-          };
-
-          speechSynthesis.speak(u);
-        };
-
-        playNext();
+        speechSynthesis.cancel();
+        speechSynthesis.speak(utter);
       };
 
       waitForVoices();
     };
 
     const enable = () => {
-      speakAll();
+      speak();
       window.removeEventListener("click", enable);
       window.removeEventListener("touchstart", enable);
     };
@@ -242,7 +227,6 @@ export default function VoiceAssistant() {
       window.removeEventListener("click", enable);
       window.removeEventListener("touchstart", enable);
     };
-
   }, []);
 
   return null;
