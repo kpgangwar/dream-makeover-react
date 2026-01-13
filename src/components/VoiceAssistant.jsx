@@ -169,7 +169,7 @@
 //   );
 // }
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 export default function VoiceAssistant() {
 
@@ -181,60 +181,67 @@ export default function VoiceAssistant() {
     "चलिए शुरू करते हैं!"
   ];
 
+  const spokenRef = useRef(false);
+
   useEffect(() => {
 
-    let spoken = false;   // 🔥 prevent repeat
-
     const startVoice = () => {
-      if (spoken) return;
-      spoken = true;
+      if (spokenRef.current) return;
+      spokenRef.current = true;
 
-      const voices = speechSynthesis.getVoices();
+      // Wait for voices to be fully ready
+      const loadAndSpeak = () => {
+        const voices = speechSynthesis.getVoices();
+        if (!voices.length) {
+          setTimeout(loadAndSpeak, 300);
+          return;
+        }
 
-      // Best soft female-like voice
-      const voice =
-        voices.find(v => v.lang === "hi-IN") ||
-        voices.find(v => v.lang === "en-IN") ||
-        voices.find(v => v.lang.startsWith("en")) ||
-        voices[0];
+        const voice =
+          voices.find(v => v.lang === "hi-IN") ||
+          voices.find(v => v.lang === "en-IN") ||
+          voices.find(v => v.lang.startsWith("en")) ||
+          voices[0];
 
-      let index = 0;
+        let i = 0;
 
-      const speakNext = () => {
-        if (index >= greetings.length) return;
+        const speakNext = () => {
+          if (i >= greetings.length) return;
 
-        const utter = new SpeechSynthesisUtterance(greetings[index]);
-        utter.voice = voice;
-        utter.rate = 0.95;
-        utter.pitch = 1.4;
-        utter.volume = 1;
+          const utter = new SpeechSynthesisUtterance(greetings[i]);
+          utter.voice = voice;
+          utter.rate = 0.95;
+          utter.pitch = 1.3;
+          utter.volume = 1;
 
-        utter.onend = () => {
-          index++;
-          setTimeout(speakNext, 400);
+          utter.onend = () => {
+            i++;
+            setTimeout(speakNext, 500);
+          };
+
+          speechSynthesis.speak(utter);
         };
 
-        speechSynthesis.speak(utter);
+        speechSynthesis.cancel();
+        speakNext();
       };
 
-      speakNext();
+      loadAndSpeak();
     };
 
-    // 🔥 Mobile + Chrome require user touch
-    const enableOnTouch = () => {
+    const enable = () => {
       startVoice();
-      window.removeEventListener("click", enableOnTouch);
-      window.removeEventListener("touchstart", enableOnTouch);
+      window.removeEventListener("click", enable);
+      window.removeEventListener("touchstart", enable);
     };
 
-    window.addEventListener("click", enableOnTouch);
-    window.addEventListener("touchstart", enableOnTouch);
+    window.addEventListener("click", enable);
+    window.addEventListener("touchstart", enable);
 
     return () => {
-      window.removeEventListener("click", enableOnTouch);
-      window.removeEventListener("touchstart", enableOnTouch);
+      window.removeEventListener("click", enable);
+      window.removeEventListener("touchstart", enable);
     };
-
   }, []);
 
   return null;
