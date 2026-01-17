@@ -1,22 +1,247 @@
+
+
 .offers-page {
-  padding: 2rem;
-  text-align: center;
-  background-color: #fff0f5;
+  padding: 60px 8%;
+  background: #000;
   min-height: 100vh;
-  color: #333;   /* ⭐ KEY LINE */
+  color: #fff;
 }
 
-.offers-page h1 {
-  color: #96083a;
-  font-size: 3.7rem;
-  margin-bottom: 1rem;
-}
- .offers-page p{
-  font-size: 1.5rem;
-  color: aqua;
- }
 
- .offers-page ul{
-  font-family: sans-serif;
-  color:purple;
- }
+.offers-header {
+  margin-bottom: 40px;
+}
+
+.offers-text h1 {
+  font-size: 38px;
+  color: #d4af37;
+}
+
+.subtitle {
+  color: #ccc;
+  margin-top: 10px;
+  max-width: 400px;
+}
+
+.offers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+
+.offer-card {
+  background: #111;
+  padding: 25px;
+  padding-right: 40px;
+  border-radius: 18px;
+  border: 1px solid #d4af37;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.15);
+}
+
+
+.offer-card-inner {
+  display: flex;
+  justify-content: space-between;
+  
+   /* align-items: flex-start;  */
+   align-items: center;
+  gap: 28px;
+  }
+
+
+.offer-content {
+  flex: 1;
+}
+
+.offer-tag {
+  display: inline-block;
+  background: #d4af37;
+  color: #000;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.offer-content h2 {
+  color: #d4af37;
+  margin-bottom: 12px;
+}
+
+.offer-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.offer-content ul li {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #ccc;
+}
+
+.price {
+  font-size: 26px;
+  color: #d4af37;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.book-btn {
+  background: linear-gradient(45deg, #d4af37, #f5e17a);
+  border: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #000;
+   white-space: nowrap;          
+  min-width: 120px;   
+}
+
+
+
+.model-oval {
+  width: 200px;
+  height: 260px;
+
+  border-radius: 50% ;
+  overflow: hidden;
+  border: 2px solid #d4af37;
+
+  justify-self: end;   
+}
+.model-oval img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+
+@media (max-width: 768px) {
+  
+  .offer-card-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+
+  .model-oval {
+    width: 180px;
+    height: 300px;
+    margin-top: 15px;
+   
+  }
+}
+
+.offer-card:hover .model-oval {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.6);
+}
+
+.offer-card:hover .model-oval img {
+  transform: scale(1.12);
+}
+
+
+/* ===== EXTRA SECTIONS ===== */
+.offers-extra {
+  margin-top: 60px;
+  background: #0f0f0f;
+  border: 1px solid rgba(212, 175, 55, 0.5);
+  border-radius: 18px;
+  padding: 30px;
+}
+
+.extra-title {
+  font-size: 28px;
+  color: #d4af37;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.price-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.price-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px dashed rgba(212, 175, 55, 0.3);
+  font-size: 16px;
+  color: #eee;
+}
+
+.price-list li span {
+  color: #f5e17a;
+  font-weight: bold;
+}
+
+.free-note {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 18px;
+  color: #f5e17a;
+  font-weight: bold;
+}
+
+/* ===== EXTRA SECTIONS WITH IMAGE ===== */
+.offers-extra {
+  margin-top: 60px;
+  background: #0f0f0f;
+  border: 1px solid rgba(212, 175, 55, 0.5);
+  border-radius: 18px;
+  padding: 28px;
+  text-align: center;
+}
+
+.extra-title {
+  font-size: 28px;
+  color: #d4af37;
+  margin-bottom: 18px;
+}
+
+.extra-image {
+  width: 100%;
+  max-width: auto;
+  height: auto;
+  border-radius: 14px;
+  margin: 0 auto 20px;
+  display: block;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+}
+
+.price-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.price-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px dashed rgba(212, 175, 55, 0.3);
+  font-size: 16px;
+  color: #eee;
+}
+
+.price-list li span {
+  color: #f5e17a;
+  font-weight: bold;
+}
+
+.free-note {
+  margin-top: 18px;
+  font-size: 18px;
+  color: #f5e17a;
+  font-weight: bold;
+}
