@@ -13,6 +13,7 @@ const banners = [
   // "/images/banner/makeup3.jpg",
   // "/images/banner/1920x500c.png",
   "/images/banner/image.png",
+  "/images/banner/voucher.png",
 ];
 
 
@@ -25,7 +26,7 @@ function Hero({ openModal }) {
   useEffect(() => {
     const timer = setInterval(() => {
       setIndex((prev) => (prev + 1) % banners.length);
-    }, 3000);
+    }, 5000);
     return () => clearInterval(timer);
   }, []);
 
