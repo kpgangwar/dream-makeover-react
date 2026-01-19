@@ -174,7 +174,7 @@ const Offers = () => {
 
   <ul className="price-list">
     <li>Honey Wax (Full Hand + Underarms) <span>₹150</span></li>
-    <li>Honey Wax (Full Leg) <span>₹300</span></li>
+    <li>Honey Wax (Full Leg) <span>₹400</span></li>
     <li>Rica Wax (Full Hand + Underarms) <span>₹300</span></li>
     <li>Rica Wax (Full Leg) <span>₹600</span></li>
   </ul>
@@ -193,7 +193,7 @@ const Offers = () => {
   <ul className="price-list">
     <li>Hair Wash <span>₹100</span></li>
     <li>Hair Cut <span>₹50 / ₹200</span></li>
-    <li>Ironing <span>₹100</span></li>
+    <li>Ironing <span>₹200</span></li>
     <li>Tongs <span>₹200</span></li>
     <li>Blow Dry <span>₹200</span></li>
     <li>Hair Spa Treatment <span>₹600</span></li>
@@ -214,7 +214,7 @@ const Offers = () => {
 
   <ul className="price-list">
     <li>Basic Highlights (Medium Length) <span>₹1000</span></li>
-    <li>Global Color <span>₹1000</span></li>
+    <li>Global Color <span>₹2000</span></li>
     <li>3D Highlights <span>₹2000</span></li>
     <li>Plex Highlights <span>₹2000</span></li>
     <li>Keratin Treatment <span>₹3000</span></li>

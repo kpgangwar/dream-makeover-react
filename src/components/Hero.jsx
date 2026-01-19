@@ -12,7 +12,7 @@ const banners = [
   // "/images/banner/makeup2.jpg",
   // "/images/banner/makeup3.jpg",
   // "/images/banner/1920x500c.png",
-  "/images/banner/image.png",
+  "/images/banner/image2.png",
   "/images/banner/voucher.png",
 ];
 
