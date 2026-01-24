@@ -31,7 +31,10 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      <h2 className="logo">✨ Dream Makeover ✨</h2>
+      <h2 className="logo">
+        <span className="logo-desktop">✨ Dream Makeover ✨</span>
+  <span className="logo-mobile">Dream Makeover ✨</span>
+      </h2>
 
       {/* Hamburger */}
       <div className="hamburger" onClick={() => setOpen(!open)}>

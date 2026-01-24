@@ -71,6 +71,15 @@
   display: block;
 }
 
+/* Default: Desktop */
+.logo-mobile {
+  display: none;
+}
+
+.logo-desktop {
+  display: inline;
+}
+
 
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {

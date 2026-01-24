@@ -37,7 +37,7 @@ function Hero({ openModal }) {
 <div className="scroll-strip">
   <div className="scroll-text">
     <span>
-      Dream Makeover ✨ Luxury Bridal & Party Makeup • Hair • Academy • Limited
+      Dream Makeover ✨ Luxury Bridal & Party Makeup • Hair • Academy • Special Welcome Offer • Limited
       Slots Available
     </span>
   </div>
