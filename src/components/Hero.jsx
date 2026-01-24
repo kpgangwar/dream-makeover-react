@@ -33,6 +33,17 @@ function Hero({ openModal }) {
   return (
     <>
       <VoiceAssistant />
+      {/* SCROLLING ANNOUNCEMENT STRIP */}
+<div className="scroll-strip">
+  <div className="scroll-text">
+    <span>
+      Dream Makeover ✨ Luxury Bridal & Party Makeup • Hair • Academy • Limited
+      Slots Available
+    </span>
+  </div>
+</div>
+
+
 
       <div className="top-banner">
         <img src={banners[index]} alt="Dream Makeover Banner" />
