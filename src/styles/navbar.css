@@ -39,7 +39,8 @@
 /* Active */
 .nav-links a.active {
   color: #c9a646;
-  border-bottom: 2px solid #c9a646;
+  /* border-bottom: 2px solid #c9a646; */
+   
 }
 
 /* ===== Hamburger ===== */
@@ -94,6 +95,14 @@
 
   .logo {
     margin: 0 auto;
+  }
+
+   .logo-desktop {
+    display: none;
+  }
+
+  .logo-mobile {
+    display: inline;
   }
 
   /* Dropdown menu */
