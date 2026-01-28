@@ -3,7 +3,7 @@
 
 
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import VoiceAssistant from "./VoiceAssistant";
 import "../styles/hero.css";
 
@@ -14,6 +14,7 @@ const banners = [
   // "/images/banner/1920x500c.png",
   "/images/banner/image2.png",
   "/images/banner/voucher.png",
+  "/images/banner/voucher2.png",
 ];
 
 
@@ -22,13 +23,48 @@ const banners = [
 
 function Hero({ openModal }) {
   const [index, setIndex] = useState(0);
+  const timerRef = useRef(null);
 
-  useEffect(() => {
-    const timer = setInterval(() => {
+
+  // useEffect(() => {
+  //   const timer = setInterval(() => {
+  //     setIndex((prev) => (prev + 1) % banners.length);
+  //   }, 5000);
+  //   return () => clearInterval(timer);
+  // }, []);
+
+
+//   useEffect(() => {
+//   if (banners.length <= 1) return; // ek hi image ho to slider na chale
+
+//   const timer = setInterval(() => {
+//     setIndex((prev) => (prev + 1) % banners.length);
+//   }, 5000);
+
+//   return () => clearInterval(timer);
+// }, [banners.length]);
+
+  const startSlider = () => {
+    if (timerRef.current) return; // already running
+
+    timerRef.current = setInterval(() => {
       setIndex((prev) => (prev + 1) % banners.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, []);
+    }, 3000);
+  };
+
+  const stopSlider = () => {
+    clearInterval(timerRef.current);
+    timerRef.current = null;
+  };
+
+    useEffect(() => {
+    if (banners.length <= 1) return;
+
+    startSlider();
+    return stopSlider;
+  }, [banners.length]);
+
+
 
   return (
     <>
@@ -45,7 +81,18 @@ function Hero({ openModal }) {
 
 
 
-      <div className="top-banner">
+      {/* <div className="top-banner">
+        <img src={banners[index]} alt="Dream Makeover Banner" />
+      </div> */}
+
+       {/* 🔥 SMART BANNER */}
+      <div
+        className="top-banner"
+        onMouseEnter={stopSlider}   // Desktop hover
+        onMouseLeave={startSlider} // Desktop leave
+        onTouchStart={stopSlider}  // Mobile touch
+        onTouchEnd={startSlider}   // Mobile touch end
+      >
         <img src={banners[index]} alt="Dream Makeover Banner" />
       </div>
 

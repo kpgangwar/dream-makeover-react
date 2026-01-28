@@ -3,15 +3,15 @@ import { Helmet } from "react-helmet-async";
 import "../styles/gallery.css";
 
 const images = [
-  { src: "/images/before1.png", caption: "Bridal Makeup Transformation" },
-  { src: "/images/after1.png", caption: "Soft Glam Bridal Look" },
-  { src: "/images/girlhair.jpg", caption: "Before Hair Smoothening" },
-  { src: "/images/hairdryer.jpg", caption: "After Smoothening ✨" },
-  { src: "/images/m.jpg", caption: "Skin Treatment (Before)" },
-  { src: "/images/mm.jpg", caption: "Glowing Skin (After)" },
-  { src: "/images/f.jpg", caption: "Party Makeup Before" },
-  { src: "/images/ff.jpg", caption: "HD Party Makeup Look" },
-  { src: "/images/ff.jpg", caption: "HD Party Makeup Look" },
+  { src: "/images/gallery/before1.png", caption: "Bridal Makeup Transformation" },
+  { src: "/images/gallery/after1.png", caption: "Soft Glam Bridal Look" },
+  { src: "/images/gallery/girlhair.jpg", caption: "Before Hair Smoothening" },
+  { src: "/images/gallery/hairdryer.jpg", caption: "After Smoothening ✨" },
+  { src: "/images/gallery/mm.jpg", caption: "Glowing Skin (After)" },
+  { src: "/images/gallery/f.jpg", caption: "Party Makeup Before" },
+  { src: "/images/gallery/m.jpg", caption: "Skin Treatment (Before)" },
+  { src: "/images/gallery/hairstyle.png", caption: "HD Party Makeup Look" },
+  // { src: "/images/ff.jpg", caption: "HD Party Makeup Look" },
 ];
 
 function Gallery() {
