@@ -49,6 +49,7 @@ import Booking from "./pages/booking";
 import AdminDashboard from "./pages/adminDashboard";
 import AdminBooking from "./pages/adminBooking";
 import ProtectedRoute from "./components/protectedRoute";
+import Footer from "./components/footer";
 
 import "./styles/global.css";
 
@@ -103,6 +104,7 @@ function NavbarLayout() {
     <>
       <Navbar />
       <Outlet />
+      <Footer />
     </>
   );
 }
