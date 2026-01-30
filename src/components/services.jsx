@@ -50,16 +50,16 @@ export default function App() {
   };
 
   const services = [
-    { name: "Hair Spa", img: "/images/hair-spa.jpg" },
-    { name: "Bridal Makeup", img: "/images/bridal-makeup.jpg" },
-    { name: "Facial Glow", img: "/images/facial-image1.jpg" },
-    { name: "Nail Art", img: "/images/nail-art1.jpg" },
-    { name: "Hair Styling", img: "/images/hair-style1.jpg" },
-    { name: "Skin Treatment", img: "/images/skin.jpg" },
-    { name: "Party Makeup", img: "/images/party.webp" },
-    { name: "Mehndi Design", img: "/images/mendhi-design.webp" },
-    { name: "Eyebrow & Lash", img: "/images/eyelash1.webp" },
-    { name: "Full Beauty Care", img: "/images/fullcare.webp" },
+    { name: "Hair Spa", img: "/images/services/hair-spa.jpg" },
+    { name: "Bridal Makeup", img: "/images/services/bridal-makeup.jpg" },
+    { name: "Facial Glow", img: "/images/services/facial-image1.jpg" },
+    { name: "Nail Art", img: "/images/services/nail-art1.jpg" },
+    { name: "Hair Styling", img: "/images/services/hair-style1.jpg" },
+    { name: "Skin Treatment", img: "/images/services/skin.png" },
+    { name: "Party Makeup", img: "/images/services/party.webp" },
+    { name: "Mehndi Design", img: "/images/services/mendhi-design.webp" },
+    { name: "Eyebrow & Lash", img: "/images/services/eyelash1.webp" },
+    { name: "Full Beauty Care", img: "/images/services/fullcare.webp" },
   ];
 
   return (
@@ -136,9 +136,7 @@ export default function App() {
         ></iframe>
       </section>
 
-      <footer>
-        <p>© 2025 Dream Makeover. All rights reserved.</p>
-      </footer>
+     
     </>
   );
 }

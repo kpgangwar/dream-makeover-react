@@ -88,7 +88,7 @@ export default function Home() {
           </div>
 
           <div className="card">
-            <img src="/images/facial.png" alt="facial" />
+            <img src="/images/f.jpg" alt="facial" />
             <h3>Skin Care</h3>
             <p>Facial, Cleanup & Glow Treatment</p>
           </div>
@@ -114,8 +114,8 @@ export default function Home() {
       <section className="gallery">
         <h2 className="section-title">Before & After ✨</h2>
         <div className="gallery-grid">
-          <img src="/images/before-after1.png" alt="before & after" />
-          <img src="/images/before-after2.png" alt="before & after" />
+          <img src="/images/before&after/before-after1.png" alt="before & after" />
+          <img src="/images/before&after/before-after2.png" alt="before & after" />
         </div>
         {/* <button className="view-btn">View Full Gallery</button> */}
       </section>
