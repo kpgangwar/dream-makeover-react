@@ -9,9 +9,9 @@ const images = [
   { src: "/images/gallery/hairdryer.jpg", caption: "After Smoothening ✨" },
   { src: "/images/gallery/mm.jpg", caption: "Glowing Skin (After)" },
   { src: "/images/gallery/f.jpg", caption: "Party Makeup Before" },
-  { src: "/images/gallery/m.jpg", caption: "Skin Treatment (Before)" },
-  { src: "/images/gallery/hairstyle.png", caption: "HD Party Makeup Look" },
-  // { src: "/images/ff.jpg", caption: "HD Party Makeup Look" },
+  { src: "/images/gallery/makeup.jpg", caption: "Skin Treatment (Before)" },
+  { src: "/images/gallery/hair-style1.jpg", caption: "HD Party Makeup Look" },
+  { src: "/images/gallery/hair-colouring.jpg", caption: "HD Party Makeup Look" },
 ];
 
 function Gallery() {
