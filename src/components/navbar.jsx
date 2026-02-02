@@ -3,6 +3,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 
+
 import "../styles/navbar.css";
 
 export default function Navbar() {
@@ -52,7 +53,7 @@ export default function Navbar() {
         <Link onClick={() => setOpen(false)} className={location.pathname === "/booking" ? "active" : ""} to="/booking">Booking</Link>
         <Link onClick={() => setOpen(false)} className={location.pathname === "/gallery" ? "active" : ""} to="/gallery">Gallery</Link>
         <Link onClick={() => setOpen(false)} className={location.pathname === "/contact" ? "active" : ""} to="/contact">Contact</Link>
-
+        <Link onClick={() => setOpen(false)} className={location.pathname === "/ratelist" ? "active" : ""} to="/ratelist">Rate List</Link>
         {/* <a
           href="https://artificial-flower-house.netlify.app"
           target="_blank"

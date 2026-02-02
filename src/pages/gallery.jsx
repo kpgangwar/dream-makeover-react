@@ -5,7 +5,7 @@ import "../styles/gallery.css";
 const images = [
   { src: "/images/gallery/before1.png", caption: "Bridal Makeup Transformation" },
   { src: "/images/gallery/after1.png", caption: "Soft Glam Bridal Look" },
-  { src: "/images/gallery/girlhair.jpg", caption: "Before Hair Smoothening" },
+  { src: "/images/gallery/m.jpg", caption: "Before Hair Smoothening" },
   { src: "/images/gallery/hairdryer.jpg", caption: "After Smoothening ✨" },
   { src: "/images/gallery/mm.jpg", caption: "Glowing Skin (After)" },
   { src: "/images/gallery/f.jpg", caption: "Party Makeup Before" },

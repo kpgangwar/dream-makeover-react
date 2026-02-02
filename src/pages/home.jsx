@@ -116,6 +116,16 @@ export default function Home() {
         <div className="gallery-grid">
           <img src="/images/before&after/before-after1.png" alt="before & after" />
           <img src="/images/before&after/before-after2.png" alt="before & after" />
+          <img src="/images/before&after/ab1.jpg" alt="before & after" />
+          <img src="/images/before&after/ab2.jpg" alt="before & after" />
+          <img src="/images/before&after/ab3.jpg" alt="before & after" />
+          <img src="/images/before&after/ab4.jpg" alt="before & after" />
+          <img src="/images/before&after/ab5.jpg" alt="before & after" />
+          <img src="/images/before&after/ab6.jpg" alt="before & after" />
+          <img src="/images/before&after/bh1.jpg" alt="before & after" />
+          <img src="/images/before&after/bh2.jpg" alt="before & after" />
+          <img src="/images/before&after/bh3.jpg" alt="before & after" />
+          <img src="/images/before&after/bh4.jpg" alt="before & after" />
         </div>
         {/* <button className="view-btn">View Full Gallery</button> */}
       </section>
