@@ -43,7 +43,7 @@ export default function Ratelist() {
       ],
     },
     {
-      category: "Threading (Female)",
+      category: "Threading",
       items: [
         ["Eyebrows", "₹30"],
         ["Upper Lips", "₹30"],

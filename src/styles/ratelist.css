@@ -21,7 +21,7 @@
 .rate-wrapper h1 {
   text-align: center;    
   color: var(--gold);
-  letter-spacing: 1px;
+  letter-spacing: 0.1px;
   margin-bottom: 6px;
 }
 
