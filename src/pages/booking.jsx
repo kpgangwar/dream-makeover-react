@@ -153,6 +153,7 @@ Time: ${formData.time || "Not selected"}`;
             type="date"
             name="date"
             value={formData.date}
+            min={new Date().toISOString().split("T")[0]}
             onChange={handleChange}
           />
          {/* <input
