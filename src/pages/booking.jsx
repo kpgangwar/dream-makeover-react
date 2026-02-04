@@ -78,93 +78,45 @@ const Booking = () => {
     setFormData({ ...formData, services: selected || [] });
   };
 
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-//    if (!formData.name || !formData.phone || formData.services.length === 0) {
-//   alert("Please fill all required details 🙏");
-//   return;
-// }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+   if (!formData.name || !formData.phone || formData.services.length === 0) {
+  alert("Please fill all required details 🙏");
+  return;
+}
 
-// if (!/^[6-9]\d{9}$/.test(formData.phone)) {
-//   alert("❌ Please enter a valid 10 digit mobile number");
-//   return;
-// }
+if (!/^[6-9]\d{9}$/.test(formData.phone)) {
+  alert("❌ Please enter a valid 10 digit mobile number");
+  return;
+}
 
-//   // 🔥 LEAD TRACKING (VALID LEAD ONLY)
-//   window.dataLayer = window.dataLayer || [];
-//   window.dataLayer.push({
-//     event: "generate_lead",
-//   });
+  // 🔥 LEAD TRACKING (VALID LEAD ONLY)
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: "generate_lead",
+  });
   
-//     const message = `💄 Dream Makeover Booking 💄
-// Name: ${formData.name}
-// Phone: ${formData.phone}
-// Services: ${formData.services.map(s => s.label).join(", ")}
-// Date: ${formData.date || "Not selected"}
-// Time: ${formData.time || "Not selected"}`;
-
-//     // WhatsApp number with country code
-//     const whatsappNumber = "918909087801";
-//     const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-//     window.open(url, "_blank");
-
-//     // Reset form
-//     setFormData({
-//       name: "",
-//       phone: "",
-//       services: [],
-//       date: "",
-//       time: "",
-//     });
-//   };
-
-
-const handleSubmit = (e) => {
-  e.preventDefault();
-
-  // ✅ Validation
-  if (!formData.name || !formData.phone || formData.services.length === 0) {
-    alert("Please fill all required details 🙏");
-    return;
-  }
-
-  if (!/^[6-9]\d{9}$/.test(formData.phone)) {
-    alert("❌ Please enter a valid 10 digit mobile number");
-    return;
-  }
-
-  // 🧾 WhatsApp message
-  const message = `💄 Dream Makeover Booking 💄
+    const message = `💄 Dream Makeover Booking 💄
 Name: ${formData.name}
 Phone: ${formData.phone}
 Services: ${formData.services.map(s => s.label).join(", ")}
 Date: ${formData.date || "Not selected"}
 Time: ${formData.time || "Not selected"}`;
 
-  // 🔥 GA4 LEAD EVENT (ONLY ONCE)
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    event: "generate_lead",
-  });
-
-  // ⏳ WhatsApp ko delay do (MOST IMPORTANT)
-  setTimeout(() => {
+    // WhatsApp number with country code
     const whatsappNumber = "918909087801";
     const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
-  }, 800); // 800ms delay
 
-  // 🔄 Reset form
-  setFormData({
-    name: "",
-    phone: "",
-    services: [],
-    date: "",
-    time: "",
-  });
-};
-
-
+    // Reset form
+    setFormData({
+      name: "",
+      phone: "",
+      services: [],
+      date: "",
+      time: "",
+    });
+  };
 
   return (
     <div className="booking-page">
