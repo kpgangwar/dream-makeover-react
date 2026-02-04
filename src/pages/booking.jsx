@@ -90,7 +90,12 @@ if (!/^[6-9]\d{9}$/.test(formData.phone)) {
   return;
 }
 
-
+  // 🔥 LEAD TRACKING (VALID LEAD ONLY)
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: "generate_lead",
+  });
+  
     const message = `💄 Dream Makeover Booking 💄
 Name: ${formData.name}
 Phone: ${formData.phone}
