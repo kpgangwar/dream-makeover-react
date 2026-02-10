@@ -98,6 +98,7 @@
 }
 
 .hero h1 span {
+  margin-right: 20px;
   color: white;
   text-shadow: 0 0 20px gold;
 }
@@ -110,7 +111,7 @@
 
 /* Image */
 .hero-right {
- margin-left: 150px;
+ 
   display: flex;
   justify-content: flex-end;
 }
