@@ -110,29 +110,19 @@
 
 /* Image */
 .hero-right {
+ margin-left: 150px;
   display: flex;
   justify-content: flex-end;
 }
 
 
-/* .hero-right img {
-  width: 300px;
-  height: 300px;
- 
-  border-radius: 50%;
-  filter: drop-shadow(0 0 30px gold);
-  animation: float 4s ease-in-out infinite;
-} */
-
 .hero-right img {
   width: 300px;
   height: 300px;
+  
   border-radius: 50%;
   filter: drop-shadow(0 0 30px gold);
   animation: float 4s ease-in-out infinite;
-  
-  /* Ye line add karein */
-  margin-left: 50px; 
 }
 
 
