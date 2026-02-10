@@ -10,10 +10,12 @@ import "../styles/hero.css";
 const banners = [
   // "/images/banner/makeup1.jpg",
   // "/images/banner/makeup2.jpg",
-  // "/images/banner/makeup3.jpg",
-  // "/images/banner/1920x500c.png",
+  // "/images/banner/makeup4.jpg",
+  // "/images/banner/1920x140c.png",
   "/images/banner/image2.png",
   "/images/banner/voucher.png",
+  "/images/banner/voucher4.png",
+  "/images/banner/voucher5.png",
   "/images/banner/voucher2.png",
 ];
 
@@ -109,7 +111,7 @@ function Hero({ openModal }) {
 
           <button className="btn-book" onClick={openModal}>
             {/* Book Your Glam Session */}
-            Call Now
+            Contact Us
           </button>
         </div>
 
