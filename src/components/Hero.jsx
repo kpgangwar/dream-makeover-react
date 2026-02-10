@@ -108,7 +108,8 @@ function Hero({ openModal }) {
           </p>
 
           <button className="btn-book" onClick={openModal}>
-            Book Your Glam Session
+            {/* Book Your Glam Session */}
+            Call Now
           </button>
         </div>
 
