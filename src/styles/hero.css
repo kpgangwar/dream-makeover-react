@@ -107,7 +107,7 @@
       
       
           height: 140px;
-          .scroll-strip {
+  .scroll-strip {
     height: 32px;
   }
   .scroll-text {
@@ -138,10 +138,10 @@
   }
    .hero-left{
     margin-top: -30px;
-  max-width: 40%;
+  max-width: 35%;
 }
   .hero h1 {
-    font-size: 3.4rem;
+    font-size: 3.1rem;
   }
 
   .hero p {
@@ -150,8 +150,8 @@
   }
 
   .hero-right img {
-    width: 180px;
-    height: 350px;
+    width: 170px;
+    height: 300px;
   }
 }
 @keyframes float {
