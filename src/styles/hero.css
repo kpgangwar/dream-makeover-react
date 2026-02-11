@@ -160,7 +160,7 @@
   100% { transform: translateY(0); }
 }
 
-
+/* 
 .scroll-strip {
   width: 100%;
   height: 30px;
@@ -203,4 +203,39 @@
 
 
 
+ */
+.scroll-strip {
+  width: 100%;
+  height: 21px;
+  background: #000;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
 
+.scroll-text {
+  display: inline-block; /* Essential for transform */
+  white-space: nowrap;
+  color: #c9a646;
+  font-size: 15px;
+  font-weight: 400;
+  font-family:sans-serif ;
+  
+  /* Left ki jagah transform use karenge */
+  padding-left: 100%; 
+  animation: scroll-left 25s linear infinite;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  will-change: transform; /* Browser ko optimize karne mein madad karta hai */
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

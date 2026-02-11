@@ -75,8 +75,9 @@ function Hero({ openModal }) {
 <div className="scroll-strip">
   <div className="scroll-text">
     <span>
-      Dream Makeover ✨ Luxury Bridal & Party Makeup • Hair • Academy • Special Welcome Offer • Limited
-      Slots Available
+   👑 Dream Makeover | Bridal Makeup Starting ₹2999 | 
+Flat 20% OFF on First Visit | Call Now 📞 8909087801
+
     </span>
   </div>
 </div>
