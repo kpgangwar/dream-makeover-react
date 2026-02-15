@@ -68,6 +68,15 @@ export default function Home() {
 
       {/* MODAL */}
       <Modal show={isModalOpen} onClose={() => setIsModalOpen(false)} />
+  
+      {/* GOOGLE TRUST SECTION */}
+<section className="google-trust">
+  <div className="trust-container">
+    <h2>⭐⭐⭐⭐⭐ 5.0 Rated on Google</h2>
+    <p>Trusted by 64+ Happy Clients in Bareilly</p>
+  </div>
+</section>
+
 
       {/* SERVICES */}
       <section className="services">

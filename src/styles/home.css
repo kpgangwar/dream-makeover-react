@@ -153,3 +153,22 @@
   cursor: pointer;
 }
 
+.google-trust {
+  background: #0d0d0d;
+  padding: 30px 20px;
+  text-align: center;
+  border-top: 1px solid #222;
+  border-bottom: 1px solid #222;
+}
+
+.trust-container h2 {
+  color: gold;
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+.trust-container p {
+  color: white;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}

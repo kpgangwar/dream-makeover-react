@@ -14,10 +14,11 @@ const banners = [
   // "/images/banner/1920x140c.png",
   // "/images/banner/image2.png",
   "/images/banner/voucher1.png",
-  "/images/banner/voucher6.png",
-  "/images/banner/voucher4.png",
-  "/images/banner/voucher5.png",
-  "/images/banner/voucher2.png",
+  "/images/banner/voucher7.png",
+  // "/images/banner/voucher6.png",
+  // "/images/banner/voucher4.png",
+  // "/images/banner/voucher5.png",
+  // "/images/banner/voucher2.png",
 ];
 
 
