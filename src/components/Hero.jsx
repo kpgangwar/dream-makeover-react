@@ -12,8 +12,9 @@ const banners = [
   // "/images/banner/makeup2.jpg",
   // "/images/banner/makeup4.jpg",
   // "/images/banner/1920x140c.png",
-  "/images/banner/image2.png",
-  "/images/banner/voucher.png",
+  // "/images/banner/image2.png",
+  "/images/banner/voucher1.png",
+  "/images/banner/voucher6.png",
   "/images/banner/voucher4.png",
   "/images/banner/voucher5.png",
   "/images/banner/voucher2.png",
@@ -75,7 +76,7 @@ function Hero({ openModal }) {
 <div className="scroll-strip">
   <div className="scroll-text">
     <span>
-   👑 Dream Makeover | Bridal Makeup Starting ₹2999 | 
+   👑 Dream Makeover | Bridal Makeup Starting ₹1500 | 
 Flat 20% OFF on First Visit | Call Now 📞 8909087801
 
     </span>
@@ -99,16 +100,34 @@ Flat 20% OFF on First Visit | Call Now 📞 8909087801
         <img src={banners[index]} alt="Dream Makeover Banner" />
       </div>
 
+ {/* <div className="top-banner">
+  <div className="banner-slider">
+    <div className="slide">BRIDAL MAKEUP ₹1500</div>
+    <div className="slide">Flat 20% OFF – Limited Offer</div>
+    <div className="slide">Pre-Bridal & Party Packages Available</div>
+  </div>
+</div> */}
+
+
       <section className="hero">
         <div className="hero-left">
           <h1>
             Dream <span>Makeover</span>
           </h1>
 
-          <p>
+          {/* <p>
             Bridal Makeup • Hair Styling • Mehndi • Facial • Nail Art <br />
             Keratin • Smoothening • Party & Wedding Packages
-          </p>
+          </p> */}
+
+          <p>
+  Look Stunning on Your Big Day 💖 <br />
+  Bridal • Party • Pre-Bridal Beauty Packages <br />
+  Trusted Makeup Artist in Bareilly
+</p>
+
+
+
 
           <button className="btn-book" onClick={openModal}>
             {/* Book Your Glam Session */}

@@ -33,6 +33,13 @@ header h1 {
   text-shadow: 0 0 25px #ff1493, 0 0 40px #ff69b4;
 }
 
+.service-card h3 {
+  margin-top: 15px;
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+}
+
+
 header p {
   font-size: 1.2rem;
   color: #ffb6c1;
