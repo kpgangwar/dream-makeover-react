@@ -1,39 +1,4 @@
 
-// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import Navbar from './components/navbar.jsx';
-// import Home from './pages/Home';
-// import Services from './components/services.jsx';
-// import Contact from './pages/Contact';
-// import Location from './pages/Location';
-// import Offers from './pages/offers.jsx';
-// import Gallery from './pages/gallery.jsx';
-// import Booking from './pages/booking.jsx';
-// import "./styles/global.css";
-
-
-
-
-
-// function App() {
-//   return (
-//     <Router>
-//       <Navbar />
-//       <Routes>
-//         <Route path="/" element={<Home />} />
-//         <Route path="/services" element={<Services />} />
-//         <Route path="/contact" element={<Contact />} />
-//         <Route path="/location" element={<Location />} />
-//        <Route path="/offers" element={<Offers />} />
-//         <Route path="/gallery" element={<Gallery />} /> 
-//         <Route path="/booking" element={<Booking />} />
-//       </Routes>
-//     </Router>
-//   );
-// }
-
-// export default App;
-
-
 
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 
