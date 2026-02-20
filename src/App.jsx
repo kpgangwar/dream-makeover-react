@@ -16,7 +16,7 @@ import AdminBooking from "./pages/adminBooking";
 import ProtectedRoute from "./components/protectedRoute";
 import Ratelist from "./pages/ratelist";
 import Footer from "./components/footer";
-
+import Blog from "./pages/Blog";
 import "./styles/global.css";
 
 import { useEffect } from "react";
@@ -58,6 +58,7 @@ function App() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/booking" element={<Booking />} />
           <Route path="/ratelist" element={<Ratelist />} />
+          <Route path="/blog" element={<Blog />} />
           {/* Admin Pages WITH Navbar */}
           <Route
             path="/admin"

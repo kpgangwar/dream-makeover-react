@@ -9,6 +9,7 @@ import "../styles/navbar.css";
 export default function Navbar() {
   const location = useLocation();
   const [open, setOpen] = useState(false);
+  const [serviceOpen, setServiceOpen] = useState(false);
   const menuRef = useRef();
  
   useEffect(() => {
@@ -48,7 +49,25 @@ export default function Navbar() {
       <div ref={menuRef} className={`nav-links ${open ? "open" : ""}`}>
 
         <Link onClick={() => setOpen(false)} className={location.pathname === "/" ? "active" : ""} to="/">Home</Link>
-        <Link onClick={() => setOpen(false)} className={location.pathname === "/services" ? "active" : ""} to="/services">Services</Link>
+        {/* <Link onClick={() => setOpen(false)} className={location.pathname === "/services" ? "active" : ""} to="/services">Services</Link> */}
+
+        <div className="service-group">
+  <span
+    className="service-title"
+    onClick={() => setServiceOpen(!serviceOpen)}
+  >
+    Services
+  </span>
+
+  {serviceOpen && (
+    <div className="service-sub">
+      <Link onClick={() => setOpen(false)} to="/services">All Services</Link>
+      <Link onClick={() => setOpen(false)} to="/blog">Blog</Link>
+    </div>
+  )}
+</div>
+
+
         <Link onClick={() => setOpen(false)} className={location.pathname === "/offers" ? "active" : ""} to="/offers">Offers</Link>
         <Link onClick={() => setOpen(false)} className={location.pathname === "/booking" ? "active" : ""} to="/booking">Booking</Link>
         <Link onClick={() => setOpen(false)} className={location.pathname === "/gallery" ? "active" : ""} to="/gallery">Gallery</Link>

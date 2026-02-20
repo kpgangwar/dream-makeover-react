@@ -151,3 +151,36 @@
     border-bottom: none;
   }
 }
+.service-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-title {
+  cursor: pointer;
+  padding: 10px;
+  font-weight: 500;
+}
+
+/* Dropdown box */
+.service-sub {
+  padding-left: 25px;   /* ⭐ margin हटाकर padding */
+  display: flex;
+  flex-direction: column;
+  
+}
+
+/* Links */
+.service-sub a {
+  padding: 6px 0;
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+/* Hover */
+.service-sub a:hover {
+  color: #e91e63;
+  transform: translateX(3px);
+}
