@@ -17,6 +17,7 @@ import ProtectedRoute from "./components/protectedRoute";
 import Ratelist from "./pages/ratelist";
 import Footer from "./components/footer";
 import Blog from "./pages/Blog";
+import Bridal from "./pages/bridal";
 import "./styles/global.css";
 
 import { useEffect } from "react";
@@ -59,6 +60,7 @@ function App() {
           <Route path="/booking" element={<Booking />} />
           <Route path="/ratelist" element={<Ratelist />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/bridal" element={<Bridal />} />
           {/* Admin Pages WITH Navbar */}
           <Route
             path="/admin"

@@ -63,6 +63,7 @@ export default function Navbar() {
     <div className="service-sub">
       <Link onClick={() => setOpen(false)} to="/services">All Services</Link>
       <Link onClick={() => setOpen(false)} to="/blog">Blog</Link>
+      <Link to="/bridal">Bridal <br></br>Makeup</Link>
     </div>
   )}
 </div>
